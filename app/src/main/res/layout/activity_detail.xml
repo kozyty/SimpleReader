@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/common_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_title"
+            tools:ignore="RtlHardcoded" />
+        <TextView
+            android:id="@+id/detail_title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="18sp"/>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/common_gray"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_link"
+            tools:ignore="RtlHardcoded" />
+        <TextView
+            android:id="@+id/detail_link_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="16sp"/>
+
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/common_gray"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_description"
+            tools:ignore="RtlHardcoded" />
+        <TextView
+            android:id="@+id/detail_description_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/detail_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_open_browser"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+</ScrollView>

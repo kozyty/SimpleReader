@@ -11,4 +11,10 @@
     <string name="main_response_error">通信に失敗しました。</string>
     <string name="main_response_parse_error">データ解析に失敗しました。</string>
 
+    <string name="detail_title">タイトル</string>
+    <string name="detail_description">詳細</string>
+    <string name="detail_link">リンク</string>
+    <string name="detail_open_browser">ラブウザで開く</string>
+    <string name="detail_action_bar_title">詳細</string>
+
 </resources>

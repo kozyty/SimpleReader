@@ -1,11 +1,13 @@
 package com.gmail.kubota.daisuke.simplereader;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -26,6 +28,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends ActionBarActivity {
 
+    private static final String SAVED_INSTANCE_RSS_ARRAY = "RSS_ARRAY";
+
     RequestQueue mQueue;
 
     MainAdapter mAdapter;
@@ -35,6 +39,11 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (savedInstanceState != null && savedInstanceState.containsKey(SAVED_INSTANCE_RSS_ARRAY)) {
+            mList = (ArrayList<RssObject>) savedInstanceState.getSerializable(SAVED_INSTANCE_RSS_ARRAY);
+        }
+
         setContentView(R.layout.activity_main);
         mQueue = Volley.newRequestQueue(this);
         mAdapter = new MainAdapter(this, R.layout.adapter_reader_row, mList);
@@ -51,6 +60,23 @@ public class MainActivity extends ActionBarActivity {
         ListView listView = (ListView) findViewById(R.id.main_list_view);
         listView.setAdapter(mAdapter);
         listView.setEmptyView(emptyView);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                RssObject rss = mList.get(position);
+                Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                intent.putExtra(DetailActivity.BUNDLE_RSS_OBJECT, rss);
+                startActivity(intent);
+            }
+        });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable(SAVED_INSTANCE_RSS_ARRAY, mList);
     }
 
     private void requestRss() {

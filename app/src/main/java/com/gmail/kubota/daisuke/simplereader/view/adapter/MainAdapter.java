@@ -28,7 +28,6 @@ public class MainAdapter extends ArrayAdapter<RssObject> {
         if (convertView == null) {
             LayoutInflater inflater = ((Activity) getContext()).getLayoutInflater();
             convertView = inflater.inflate(R.layout.adapter_reader_row, parent, false);
-//            convertView = super.getView(position, null, parent);
             holder = new Holder();
             holder.mTitleTextView =
                     (TextView) convertView.findViewById(R.id.reader_title_text_view);

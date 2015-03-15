@@ -4,11 +4,16 @@ import android.util.Log;
 
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 /**
  *
  * Created by daisuke on 15/03/15.
  */
-public class RssObject {
+public class RssObject implements Serializable {
+
+    private static final long serialVersionUID = -5591025683974631060L;
+
     private String mTitle;
     private String mLink;
     private String mDescription;
