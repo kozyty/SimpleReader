@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SimpleReader</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="main_update_label">更新</string>
+    <string name="main_empty_label">更新ボタンを押してください</string>
+
+    <string name="main_response_error">通信に失敗しました。</string>
+    <string name="main_response_parse_error">データ解析に失敗しました。</string>
+
+</resources>
