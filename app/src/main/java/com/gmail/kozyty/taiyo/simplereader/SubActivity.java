@@ -1,6 +1,5 @@
-package com.gmail.kubota.daisuke.simplereader;
+package com.gmail.kozyty.taiyo.simplereader;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,17 +7,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
-import com.gmail.kubota.daisuke.simplereader.model.BitmapCache;
-import com.gmail.kubota.daisuke.simplereader.model.RssObject;
-
-import org.w3c.dom.Text;
+import com.gmail.kozyty.taiyo.simplereader.model.BitmapCache;
+import com.gmail.kozyty.taiyo.simplereader.model.RssObject;
 
 /**
  * Created by kozyty on 15/03/17.

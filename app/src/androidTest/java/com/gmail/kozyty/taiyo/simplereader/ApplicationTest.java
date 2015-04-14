@@ -1,4 +1,4 @@
-package com.gmail.kubota.daisuke.simplereader;
+package com.gmail.kozyty.taiyo.simplereader;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

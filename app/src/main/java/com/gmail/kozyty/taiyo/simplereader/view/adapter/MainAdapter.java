@@ -1,8 +1,7 @@
-package com.gmail.kubota.daisuke.simplereader.view.adapter;
+package com.gmail.kozyty.taiyo.simplereader.view.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
-import com.gmail.kubota.daisuke.simplereader.R;
-import com.gmail.kubota.daisuke.simplereader.model.BitmapCache;
-import com.gmail.kubota.daisuke.simplereader.model.RssObject;
+import com.gmail.kozyty.taiyo.simplereader.R;
+import com.gmail.kozyty.taiyo.simplereader.model.BitmapCache;
+import com.gmail.kozyty.taiyo.simplereader.model.RssObject;
 
 import java.util.List;
 

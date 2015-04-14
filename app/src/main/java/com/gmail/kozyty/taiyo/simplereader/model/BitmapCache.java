@@ -1,4 +1,4 @@
-package com.gmail.kubota.daisuke.simplereader.model;
+package com.gmail.kozyty.taiyo.simplereader.model;
 
 import android.graphics.Bitmap;
 import android.support.v4.util.LruCache;

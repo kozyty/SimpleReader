@@ -1,17 +1,13 @@
-package com.gmail.kubota.daisuke.simplereader;
+package com.gmail.kozyty.taiyo.simplereader;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -20,8 +16,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.gmail.kubota.daisuke.simplereader.model.RssObject;
-import com.gmail.kubota.daisuke.simplereader.view.adapter.MainAdapter;
+import com.gmail.kozyty.taiyo.simplereader.model.RssObject;
+import com.gmail.kozyty.taiyo.simplereader.view.adapter.MainAdapter;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -31,6 +27,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -113,7 +110,13 @@ public class MainActivity extends ActionBarActivity {
                         JSONObject object = entries.getJSONObject(i);
                         RssObject rss = RssObject.getInstance(object);
                         if (rss != null) {
-                            list.add(rss);
+                            if (i != 0) {
+                                Random rand = new Random();
+                                int index = rand.nextInt(list.size());
+                                list.add(index, rss);
+                            } else {
+                                list.add(rss);
+                            }
                         }
                     }
                     if (list.size() > 0) {

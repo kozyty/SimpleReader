@@ -1,6 +1,5 @@
-package com.gmail.kubota.daisuke.simplereader.model;
+package com.gmail.kozyty.taiyo.simplereader.model;
 
-import android.provider.DocumentsContract;
 import android.util.Log;
 
 import org.json.JSONObject;

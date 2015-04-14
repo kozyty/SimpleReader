@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.1"
 
     defaultConfig {
-        applicationId "com.gmail.kubota.daisuke.simplereader"
+        applicationId "com.gmail.kozyty.nanapirss"
         minSdkVersion 15
         targetSdkVersion 21
         versionCode 1
