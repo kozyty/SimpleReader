@@ -2,4 +2,8 @@
 <resources>
     <color name="common_red">#cc4400</color>
     <color name="common_blue">#0044cc</color>
+    <color name="common_green">#44cc00</color>
+    <color name="common_purple">#4400cc</color>
+    <color name="common_yellow">#ffcc00</color>
+    <color name="common_gray">#cccccc</color>
 </resources>

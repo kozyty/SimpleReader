@@ -5,31 +5,35 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/main_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/main_update_label"
-        android:layout_margin="10dp"/>
-    <ListView
-        android:id="@+id/main_list_view"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        />
-    <RelativeLayout
-        android:id="@+id/main_empty_layout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:visibility="gone">
-        <TextView
-            android:layout_centerInParent="true"
+        >
+
+        <ListView
+            android:id="@+id/main_list_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/common_red"
-            android:text="@string/main_empty_label"
-            android:gravity="center"
+            android:layout_height="match_parent"
             />
-    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/main_empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/main_empty_label"
+                android:textColor="@android:color/holo_green_light" />
+        </RelativeLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </LinearLayout>
